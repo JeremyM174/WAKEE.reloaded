@@ -1,0 +1,17 @@
+torch==2.5.1
+torchvision==0.20.1
+torchinfo==1.8.0
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.5.1
+matplotlib
+mlflow==3.3.2
+tqdm==4.67.3
+opencv-python==4.7.0.72
+dotenv
+pillow==12.0.0
+onnx
+onnxruntime==1.20.1
+onnxscript
+langchain_core==0.3.77
+langchain_mistralai==0.2.12
