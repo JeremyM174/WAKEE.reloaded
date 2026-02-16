@@ -26,6 +26,7 @@ import matplotlib.pyplot as plt
 import mlflow
 from mlflow.tracking import MlflowClient
 from mlflow.models import infer_signature
+import git
 from git import Repo
 
 
