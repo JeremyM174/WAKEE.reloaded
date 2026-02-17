@@ -29,6 +29,12 @@ from mlflow.models import infer_signature
 import git
 from git import Repo
 
+from evidently import Dataset as Dset_evidently
+from evidently import DataDefinition, Report
+from evidently.presets import DataDriftPreset, DataSummaryPreset
+from evidently.ui.workspace import CloudWorkspace
+from evidently.metrics import MAE
+
 
 
 # =====DAILY EXTRACT/LOAD=====
@@ -122,7 +128,7 @@ def weekly_s3_extract():
                 continue
 
 
-def organize_data():
+def organize_data(**context):
     local_dir="src/training/archive"
 
     # move frames into their working directory (matching training paths)
@@ -137,6 +143,7 @@ def organize_data():
     df_concat.head()
     df_concat.to_csv(f'{local_dir}/labels_daisee_continous.csv', index=False)
     print("Training csv written over!")
+    context['task_instance'].xcom_push(key='df_concat', value=df_concat)
 
     files_removal = glob.glob(os.path.join(local_dir, "daily_ratings*.csv"))
     for i in files_removal:
@@ -433,7 +440,7 @@ def new_training(**context):
                                 val_loader=val_loader,
                                 device=DEVICE,
                                 scheduler=exp_lr_scheduler,
-                                epochs=2, #epochs, # replace with 2 for quick training
+                                epochs=1, #epochs, # replace with 2 for quick training
                                 output_names=EMOTION_LABELS)
 
         mlflow.log_metrics({
@@ -499,6 +506,35 @@ def new_training(**context):
             repo.git.push("origin", "main")
             print("\nModel pushed, deployment will restart soon!")
 
-        
         else:
             print(f"\nPerformance target missed: current MAE {current_mae} higher than reference {prod_mae}!")
+
+
+# Monitoring drift
+
+def drift_detection(**context):
+    df_concat = context['task_instance'].xcom_pull(key='df_concat')
+    PROJECT_ID=os.getenv("EVIDENTLY_AI_PROJECT_ID")
+    ws = CloudWorkspace(token=os.getenv("EVIDENTLY_API_KEY"), url="https://app.evidently.cloud")
+
+    print("Environment variables set, sanity checks:")
+    project = ws.get_project(PROJECT_ID)
+    df_ref = pd.read_csv("src/backup/labels_daisee_continous.csv")
+    print("\ndf_ref:\n", df_ref.head())
+    df_prod = df_concat
+    print("\ndf_prod:\n", df_prod.head())
+
+    regression_columns = ["boredom","engagement","confusion","frustration"]
+    schema = DataDefinition(
+        numerical_columns=regression_columns,
+        categorical_columns=[])
+    print("\nschema:\n", schema)
+
+    prod_data = Dset_evidently.from_pandas(df_prod, data_definition=schema)
+    ref_data = Dset_evidently.from_pandas(df_ref, data_definition=schema)
+
+    report = Report([DataDriftPreset(), DataSummaryPreset()])
+    print("\nreport objects:\n", report)
+    wakee_reloaded_eval = report.run(prod_data, ref_data)
+    ws.add_run(PROJECT_ID, wakee_reloaded_eval)
+    print("Drift & summary report successfully uploaded to Evidently Cloud!")

@@ -66,6 +66,14 @@ with DAG(dag_id="Weekly_training", default_args=default_args, schedule_interval=
 
         [check_mlflow >> training] # >> training
 
+    with TaskGroup(group_id="monitoring") as monitoring:
+        drift_detection = PythonOperator(
+            task_id="drift_detection",
+            python_callable=custom_functions.drift_detection
+        )
+
+        [drift_detection]
+
     end_dag = DummyOperator(task_id="end_dag")
 
-    start_dag >> prepare_data >> new_training >> end_dag
+    start_dag >> prepare_data >> new_training >> monitoring >> end_dag
