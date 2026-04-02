@@ -3,7 +3,7 @@
 *[English translation](#uk-ai-solutions-design-deployment-and-monitoring) follows below.*
 
 > [!WARNING]
-> By European standards of the AI Act and considering the topic, putting to production this project based on computer vision would be **strictly forbidden**. As per the notices below, the content provided herein is **exclusively** meant for work applications or for the French certificate RNCP38777. WAKEE is and will remain a student project, without serving a full application online; any other use becomes **your** responsibility alone!
+> By European standards of the AI Act - [article 5.1.f](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#art_5) and considering the topic, putting to production this project based on computer vision would be **strictly forbidden**. As per the notices below, the content provided herein is **exclusively** meant for work applications or for the French certificate RNCP38777 "AI Architect". WAKEE is and will remain a student project, without serving a full application online; any other use becomes **your** responsibility alone!
 
 # <p align="center">Certification AIA - bloc 4 Construire, déployer et piloter des solutions d'IA :fr:</p>
 
