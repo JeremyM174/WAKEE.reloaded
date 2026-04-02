@@ -17,15 +17,21 @@ Bienvenue dans mon repo dédié à WAKEE.reloaded, votre assistant personnel pou
 ---
 
 ### :grey_question: Qu'est-ce que WAKEE?
-WAKEE signifie "Work Assistant with Kindness & Emotional Empathy", ou en français "assistant de travail avec gentillesse & empathie émotionnelle". C'est un projet étudiant sur lequel nous quatre (retrouvez-nous dans les [crédits!](#thumbsup-crédits)) avons travaillé durant notre formation en data science & engineering; il se base sur la *computer vision* (vision par ordinateur) autour du thème du TDAH (Trouble du Déficit de l'Attention avec ou sans Hyperactivité), où l'objectif consiste à déceler des marqueurs de dérive cognitive afin d'épauler l'utilisateur dans la reconcentration sur sa tâche. Tandis que la première version de [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) consistait en un sprint de deux semaines pour apporter une preuve de concept en data science, le projet revient en tant que **WAKEE.reloaded** pour cette fois mettre en pratique des concepts de data engineering sur une période de trois semaines, au travers de l'automatisation du cycle de vie de la donnée (par son orchestration), ses tâches de CI/CD et son *monitoring*!
+WAKEE signifie "Work Assistant with Kindness & Emotional Empathy", ou en français "assistant de travail avec gentillesse & empathie émotionnelle". C'est un projet étudiant sur lequel nous quatre (retrouvez-nous dans les [crédits!](#thumbsup-crédits)) avons travaillé durant notre formation en data science & engineering; il se base sur la *computer vision* (vision par ordinateur) autour du thème du TDAH (Trouble du Déficit de l'Attention avec ou sans Hyperactivité), où l'objectif consiste à déceler des marqueurs de dérive cognitive afin d'épauler l'utilisateur dans la reconcentration sur sa tâche.
+
+Tandis que la première version de [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) consistait en un sprint de deux semaines pour apporter une preuve de concept en data science, le projet revient en tant que **WAKEE.reloaded** pour cette fois mettre en pratique des concepts de data engineering sur une période de trois semaines, au travers de l'automatisation du cycle de vie de la donnée (par son orchestration), ses tâches de CI/CD et son *monitoring*!
 
 ---
 
 ### :sparkles: Fonctionnalités
 * **Reconnaissance d'émotions en temps réel:** en activant votre webcam, WAKEE détectera la présence de marqueurs de dérive cognitive (par le biais des quatre émotions que sont l'ennui, la déconcentration, la confusion et la frustration) grâce à sa technologie de réseau de neurones convolutionnels.
+
 * **Recommandations personnalisées:** grâce au LLM de Mistral, le modèle vous fournira des recommandations adaptées à l'émotion détectée pour vous aider à vous reconcentrer.
+
 * **Sessions de travail:** paramétrez des limites dans la durée de vos session de travail, et consultez leur progrès.
+
 * **Interface de l'application:** une application simple et intuitive réunissant tous les contrôles et fonctionnalités dans un unique écran!
+
 * **Priorité au bien-être:** enfin, WAKEE reste conçu sur une approche empathique. Parfois, une pause est nécessaire et méritée!
 
 ---
@@ -51,11 +57,11 @@ Pour terminer, un grand merci à nos instructeurs & mentors du bootcamp Jedha, a
 
 Bonne exploration! :feet:
 
-
+---
 
 ---
 
-
+---
 
 # <p align="center">:uk: AI solutions design, deployment, and monitoring</p>
 
@@ -69,15 +75,21 @@ Welcome to my repository dedicated to WAKEE.reloaded, your personal assistant to
 ---
 
 ### :grey_question: What is WAKEE?
-WAKEE stands for "Work Assistant with Kindness & Emotional Empathy". It is a student project the four of us (find us in the [credits!](#thumbsup-credits)) worked on during our training in data science & engineering; it is based on **computer vision** around the theme of ADHD (Attention Deficit Hyperactivity Disorder), with the objective of detecting markers of cognitive drift to help the user focus on their task at hand. While the first version of [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) was a two weeks sprint focused on a proof of concept in data science, the project comes back as **WAKEE.reloaded** to apply data engineering concepts over a period of three weeks and thus, provides the automation of the data lifecycle through orchestration, its CI/CD and monitoring!
+WAKEE stands for "Work Assistant with Kindness & Emotional Empathy". It is a student project the four of us (find us in the [credits!](#thumbsup-credits)) worked on during our training in data science & engineering; it is based on **computer vision** around the theme of ADHD (Attention Deficit Hyperactivity Disorder), with the objective of detecting markers of cognitive drift to help the user focus on their task at hand.
+
+While the first version of [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) was a two weeks sprint focused on a proof of concept in data science, the project comes back as **WAKEE.reloaded** to apply data engineering concepts over a period of three weeks and thus, provides the automation of the data lifecycle through orchestration, its CI/CD and monitoring!
 
 ---
 
 ### :sparkles: Features
 * **Real-time emotion recognition:** using your webcam, WAKEE will detect markers of cognitive drift (through the four emotions of boredom, disengagement, confusion & frustration) thanks to the convolutional neural network technology.
+
 * **Personalized recommendations:** thanks to Mistral's LLM, the model will provide you with recommendations depending on the detected emotion to help you focus.
+
 * **Work sessions:** set up timed work sessions and track the progress.
+
 * **Application interface:** a simple and intuitive application gathers all features and controls into a single screen!
+
 * **Focus on well-being:** finally, WAKEE keeps an empathy-driven approach. Sometimes, a pause is needed and well-deserved!
 
 ---
