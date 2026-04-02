@@ -34,10 +34,10 @@ Please note WAKEE.reloaded is heavily impacted by performance: given the real-ti
 
 Now for the actual steps to be performed before any use:
 
-1. To build your environment (we used Anaconda Navigator to manage it), you may find a convenient `wakee_rldd_backup.yaml` file.
+1. Build your environment (we used Anaconda Navigator to manage it); you may find a convenient `wakee_rldd_backup.yaml` file to that end.
 2. Activate the new environment (if you kept its default name) with `conda activate wakee_rldd`.
-3. `cd` to the path where you've extracted the project; it should end with `WAKEE.reloaded`.
-4. Make sure Docker is running and ready to build.
+3. `cd` to the path where you've extracted the project; it should end with `WAKEE.reloaded`. Keep it open for later.
+4. Make sure Docker is running and ready to build; keep it open as well.
 5. Finally, create and fill your `.env` file ( :heavy_exclamation_mark: never share your credentials!) by following the example given in `.env_example.md` as follows:
 
 * [AWS](https://aws.amazon.com/fr/): AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY (your user credentials to access AWS) --- S3_BUCKET_URI (the full s3 URI of your bucket: `s3://...`) --- S3_BUCKET_NAME, S3_WORK_FOLDER (from your S3 interface, exclusively the *names* of your bucket and the working folder contained within: `my-wakee-bucket` & `my-working-folder`) --- ARTIFACT_STORE_URI (the full s3 URI under which ML artifacts will be stored: `s3://...`)
@@ -60,13 +60,13 @@ WAKEE in itself is meant to run locally for multiple reasons; chief amongst them
 
 When we refer only to "WAKEE", it is the script which can only be run on your localhost, bringing your web browser up. This is where the user begins: the convenient interface enables them to start or stop the real-time capture through their webcam, setting their work sessions on the left-hand side, and getting recommendations (upon detection of cognitive drift) on the right-hand side.
 
-<br>
+<br><br>
 
 Using deep learning means (through a convolutional neural network), emotions are recognized; those are boredom, engagement (where unlike the others, we rely on lower scores to detect *dis*engagement), confusion and frustration. When appropriate, LLM prompt engineering produces recommendations to help the user focus again.
 
 Whenever the user turns off their webcam, WAKEE will prompt them with one of the captured frames, asking them to rate their own emotions. This is where we get our new labeled data through human feedback!
 
-<br>
+<br><br>
 
 Then begins the part that the user is not expected to be aware of: WAKEE.reloaded, involving the variety of functionalities making the model live behind our project.
 
@@ -74,7 +74,7 @@ Airflow orchestration begins with a daily DAG, enabling the writing of a .csv fi
 
 This ends the daily orchestration (lower left on the schema); it is only meant to prepare the weekly training, while removing daily any leftover and/or unused data.
 
-<br>
+<br><br>
 
 Then begins the first half of the weekly DAG (upper left on schema). The new data gathered daily is compiled once a week, before starting a new model training; its results are stored into an MLflow run, allowing us to track its results.
 
@@ -82,7 +82,7 @@ Should the new challenger model perform better than the champion in use, this is
 
 As they deteriorate over time, Evidently AI will be put to practice to monitor how WAKEE's model performs, and will raise the alert in case of something crossing thresholds.
 
-<br>
+<br><br>
 
 Now completely out of the DAGs, the end user is able to make use of the latest update of WAKEE's model!
 
@@ -91,6 +91,14 @@ Following our certificate's instructions, we were also expected to deploy an API
 ---
 
 ### 3. Starting the system [:top:](#wakeereloaded-documentation)
+
+* Starting WAKEE:
+Bring back up your Anaconda Prompt window; it should still have the `wakee_rldd` environment active, running under the `\WAKEE.reloaded` folder.
+Type `cd src` to move into this folder, then type `streamlit run app.py`; it will bring up your web browser and open a localhost tab.
+There it is; give it a minute to boot up, and you'll be within WAKEE's local application to start using it!
+
+* Running WAKEE.reloaded's system:
+Move back to the root folder of the project, `\WAKEE.reloaded`. If you had just started WAKEE, simply type `cd ..`.
 
 ---
 
