@@ -36,8 +36,8 @@ Tandis que la première version de [WAKEE](https://github.com/JeremyM174/jedhapr
 
 ---
 
-### :gear: Comment est-ce que ça fonctionne, et comment le démarrer?
-Pour éviter un readme interminable, veuillez consulter le dossier `Docs`.
+### :gear: Comment fonctionne WAKEE, et comment le démarrer?
+Pour éviter un readme interminable, veuillez consulter le dossier `docs`. (:uk: Documentation en anglais!)
 
 ---
 
@@ -56,13 +56,13 @@ Et pourtant, rien de tout cela n'aurait été possible sans les travaux dans la 
 Pour terminer, un grand merci à nos instructeurs & mentors du bootcamp Jedha, ainsi qu'évidemment à l'indispensable et inestimable communauté *open source* qui nous permet de produire de telles preuves de concept!
 
 Bonne exploration! :feet:
-
+  
+  
+  
 ---
-
----
-
----
-
+  
+  
+  
 # <p align="center">:uk: AI solutions design, deployment, and monitoring</p>
 
 ### <p align="center">WAKEE.reloaded: your personal assistant to focus on your task</p>
@@ -95,7 +95,7 @@ While the first version of [WAKEE](https://github.com/JeremyM174/jedhaproject_td
 ---
 
 ### :gear: How does it work, and how to run it?
-To avoid a lengthy readme, please refer to the `Docs` folder.
+To avoid a lengthy readme, please refer to the `docs` folder.
 
 ---
 
