@@ -71,7 +71,7 @@ def daily_load(**context):
         aws_secret_access_key = aws_secret_access_key
     )
     s3 = session.resource("s3")
-    bucket = s3.Bucket("deploymentproject174")
+    bucket = s3.Bucket(os.getenv("S3_BUCKET_NAME"))
 
     bucket.upload_file(f"src/temp/daily_ratings{date.today()}.csv", f"wakee_reloaded/daily_ratings{date.today()}.csv")
     print("CSV file pushed to S3!")
