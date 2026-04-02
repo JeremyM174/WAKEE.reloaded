@@ -124,11 +124,13 @@ WAKEE.reloaded was made possible through a wide array of tools:
 * OpenCV for frame capture,
 * Pillow for image processing,
 * LangChain for LLM interaction with Mistral's models;
+<br>
 
 * Docker for virtualization,
 * Airflow for orchestration,
 * MLflow for ML experiment logging,
 * Evidently for monitoring;
+<br>
 
 * GitHub for version control and assistance with the continuous deployment,
 * HuggingFace for hosting & deploying applications,
@@ -145,7 +147,7 @@ Less of a technical read and more of a personal final word, as much as WAKEE.rel
 
 WAKEE & WAKEE.reloaded may not be operating as best as it could, but it never were the intention. We started with near-zero knowledge of data or coding in general, and look at us one year later: we produced a proof of concept relying on advanced machine learning technologies to start a new chapter in our careers!
 
-The [Jedha bootcamp](https://www.jedha.co/) spanned over a period of nearly a semester. It was an intense experience during which we've learned a lot, so I would like again to thank our instructors and mentors whom accompanied us - even though for confidentiality I won't name them, I hope they will recognize themselves and wish them the best.
+The [Jedha bootcamp](https://www.jedha.co/) spanned over a period of nearly a semester. It was an intense experience during which we've learned a lot, so I would like again to thank our instructors and mentors whom accompanied us - even though for confidentiality I won't name them, I hope they will recognize themselves and wish them the best!
 
 One more round of thanks for the exceptional open source community, which enables so many possibilities to develop new projects, experiment new concepts, and simply allows us to flourish even with little means. You're wonderful, ladies & gents!
 
