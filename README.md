@@ -9,12 +9,17 @@
 
 ### <p align="center">WAKEE.reloaded: votre assistant personnel pour la concentration</p>
 ![](docs/Logo_Jedha.jpg) ![](docs/WAKEE_image.png)
+
 *Tous droits intellectuels applicables appartiennent à leurs propriétaires respectifs. Le contenu ici présent est exclusivement mis à disposition dans le cadre du diplôme d'état RNCP38777 ou pour candidature à un emploi.*
 
 Bienvenue dans mon repo dédié à WAKEE.reloaded, votre assistant personnel pour la concentration!
 
+
+
 ### Qu'est-ce que WAKEE?
 WAKEE signifie "Work Assistant with Kindness & Emotional Empathy", ou en français "assistant de travail avec gentillesse & empathie émotionnelle". C'est un projet étudiant sur lequel nous quatre (retrouvez-nous dans les [crédits!](#crédits)) avons travaillé durant notre formation en data science & engineering; il se base sur la *computer vision* (vision par ordinateur) autour du thème du TDAH (Trouble du Déficit de l'Attention avec ou sans Hyperactivité), où l'objectif consiste à déceler des marqueurs de dérive cognitive afin d'épauler l'utilisateur dans la reconcentration sur sa tâche. Tandis que la première version de [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) consistait en un sprint de deux semaines pour apporter une preuve de concept en data science, le projet revient en tant que **WAKEE.reloaded** pour cette fois mettre en pratique des concepts de data engineering sur une période de trois semaines, au travers de l'automatisation du cycle de vie de la donnée (par son orchestration), ses tâches de CI/CD et son *monitoring*!
+
+
 
 ### Fonctionnalités
 * **Reconnaissance d'émotions en temps réel:** en activant votre webcam, WAKEE détectera la présence de marqueurs de dérive cognitive (par le biais des quatre émotions que sont l'ennui, la déconcentration, la confusion et la frustration) grâce à sa technologie de réseau de neurones convolutionnels.
@@ -23,8 +28,12 @@ WAKEE signifie "Work Assistant with Kindness & Emotional Empathy", ou en frança
 * **Interface de l'application:** une application simple et intuitive réunissant tous les contrôles et fonctionnalités dans un unique écran!
 * **Priorité au bien-être:** enfin, WAKEE reste conçu sur une approche empathique. Parfois, une pause est nécessaire et méritée!
 
+
+
 ### Comment est-ce que ça fonctionne, et comment le démarrer?
 Pour éviter un readme interminable, veuillez consulter le dossier `Docs`.
+
+
 
 ### Crédits
 WAKEE est le fruit du travail de quatre passionnés, et même si nous n'aurons pas pu le mener ensemble de bout en bout, il n'existerait pas sans nos contributions respectives!
@@ -52,12 +61,17 @@ Bonne exploration! :feet:
 
 ### <p align="center">WAKEE.reloaded: your personal assistant to focus on your task</p>
 ![](docs/Logo_Jedha.jpg) ![](docs/WAKEE_image.png)
+
 *All applicable intellectual property rights belong to their rightful owners. The content herein displayed is exclusively provided for the sake of the French professional certification RNCP38777 or for job applications.*
 
 Welcome to my repository dedicated to WAKEE.reloaded, your personal assistant to focus on your task!
 
+
+
 ### What is WAKEE?
 WAKEE stands for "Work Assistant with Kindness & Emotional Empathy". It is a student project the four of us (find us in the [credits!](#credits)) worked on during our training in data science & engineering; it is based on **computer vision** around the theme of ADHD (Attention Deficit Hyperactivity Disorder), with the objective of detecting markers of cognitive drift to help the user focus on their task at hand. While the first version of [WAKEE](https://github.com/JeremyM174/jedhaproject_tdahdetection) was a two weeks sprint focused on a proof of concept in data science, the project comes back as **WAKEE.reloaded** to apply data engineering concepts over a period of three weeks and thus, provides the automation of the data lifecycle through orchestration, its CI/CD and monitoring!
+
+
 
 ### Features
 * **Real-time emotion recognition:** using your webcam, WAKEE will detect markers of cognitive drift (through the four emotions of boredom, disengagement, confusion & frustration) thanks to the convolutional neural network technology.
@@ -66,8 +80,12 @@ WAKEE stands for "Work Assistant with Kindness & Emotional Empathy". It is a stu
 * **Application interface:** a simple and intuitive application gathers all features and controls into a single screen!
 * **Focus on well-being:** finally, WAKEE keeps an empathy-driven approach. Sometimes, a pause is needed and well-deserved!
 
+
+
 ### How does it work, and how to run it?
 To avoid a lengthy readme, please refer to the `Docs` folder.
+
+
 
 ### Credits
 *Credit where credit is due*: WAKEE is the work of four passionate people, and although we couldn't see it through altogether from start to finish, it wouldn't exist without our respective contributions!
