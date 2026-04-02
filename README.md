@@ -57,11 +57,11 @@ Pour terminer, un grand merci à nos instructeurs & mentors du bootcamp Jedha, a
 
 Bonne exploration! :feet:
 
-\
+<br><br>
 
 ---
 
-\
+<br><br>
 
 # <p align="center">:uk: AI solutions design, deployment, and monitoring</p>
 
