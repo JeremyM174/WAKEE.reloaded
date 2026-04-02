@@ -56,13 +56,13 @@ Et pourtant, rien de tout cela n'aurait été possible sans les travaux dans la 
 Pour terminer, un grand merci à nos instructeurs & mentors du bootcamp Jedha, ainsi qu'évidemment à l'indispensable et inestimable communauté *open source* qui nous permet de produire de telles preuves de concept!
 
 Bonne exploration! :feet:
+
 \
-\
-\
+
 ---
+
 \
-\
-\
+
 # <p align="center">:uk: AI solutions design, deployment, and monitoring</p>
 
 ### <p align="center">WAKEE.reloaded: your personal assistant to focus on your task</p>
