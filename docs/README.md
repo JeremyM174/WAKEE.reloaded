@@ -1,8 +1,3 @@
-WIP 03/04/26
-
-To-do:
-* point 3
-
 # <p align="center">WAKEE.reloaded documentation</p>
 
 ### Table of contents
@@ -93,12 +88,32 @@ Following our certificate's instructions, we were also expected to deploy an API
 ### 3. Starting the system [:top:](#wakeereloaded-documentation)
 
 * Starting WAKEE:
+
 Bring back up your Anaconda Prompt window; it should still have the `wakee_rldd` environment active, running under the `\WAKEE.reloaded` folder.
+
 Type `cd src` to move into this folder, then type `streamlit run app.py`; it will bring up your web browser and open a localhost tab.
+
 There it is; give it a minute to boot up, and you'll be within WAKEE's local application to start using it!
 
+<br><br>
+
 * Running WAKEE.reloaded's system:
-Move back to the root folder of the project, `\WAKEE.reloaded`. If you had just started WAKEE, simply type `cd ..`.
+
+In a terminal window, move back to the root folder of the project `\WAKEE.reloaded`. Docker should still be open and ready to build; in the terminal, you should now type `docker-compose up airflow-init`. This will start (or download) the services revolving around Airflow and ensure the loading of your environment variables.
+
+Give it some time; your terminal will become interactible again once this step is over. If you have your port mapping in head, try to remember whether your localhost:8081 is available - otherwise skip to the next part.
+
+Past that point and while your terminal is still in `\WAKEE.reloaded`, now type `docker-compose up --build`; you'll be assailed by system messages booting up all services. Give it some time again for your Airflow instance to start properly; when you'll see a successful health message ressembling `airflow-scheduler-1  | 127.0.0.1 - - [19/Mar/2026 19:06:32] "GET /health HTTP/1.1" 200 -`, you'll know Airflow is available although your terminal will now be locked. I'll leave you to choose whether you prefer passing the flag to keep it interactible; leaving it locked serves as a reminder for me that the service is still running!
+
+Now open your web browser and simply access your localhost through the following address: `http://localhost:8081`. You're in! There is no account setting performed here, since we won't put it to production; thus the account & password are simply `airflow` in both fields.
+
+Should the service not start, your port 8081 may not be available. Please check the `docker-compose.yaml` file in the root and edit the line 129 (under the airflow-webserver service) with any available port of your choice, restart the steps above and access the proper port when typing your `http://localhost:` address.
+
+Anyway, Airflow's interface is very intuitive with toggles on the left-hand side to turn on/off its DAGs. The two of them (daily & weekly) will trigger all the underlying code to perform the tasks described in the architecture above!
+
+To stop the service, if you still have the (now locked) terminal window open, simply hit ctrl+c. Otherwise in a new terminal window within the root folder of this project, type `docker-compose down`; this is it!
+
+Several ways exist to delete a container; I'll leave you to choose how far you intend on going by checking [Docker's documentation](https://docs.docker.com/engine/manage-resources/pruning/)!
 
 ---
 
