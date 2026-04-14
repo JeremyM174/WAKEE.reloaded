@@ -7,7 +7,7 @@
 3. [Starting the system](#3-starting-the-system-top)
 4. [Limits and improvements](#4-limits-and-improvements-top)
 5. [Technical stack](#5-technical-stack-top)
-6. [The legacy folder]()
+6. [The legacy folder](#6-the-legacy-folder-top)
 7. [Afterword](#7-afterword-top)
 
 > [!WARNING]
@@ -165,7 +165,7 @@ Last but not least, all dependencies and versioning can be found within the root
 
 ---
 
-### 6. The legacy folder
+### 6. The legacy folder [:top:](#wakeereloaded-documentation)
 
 The legacy folder is an older, simpler version of the work making WAKEE what it is; this folder is aimed at people who would be interested in reviewing the underlying code to understand its logic, optimize it, reuse it, or fine-tune our model their own way.
 
