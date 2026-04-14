@@ -7,7 +7,8 @@
 3. [Starting the system](#3-starting-the-system-top)
 4. [Limits and improvements](#4-limits-and-improvements-top)
 5. [Technical stack](#5-technical-stack-top)
-6. [Afterword](#6-afterword-top)
+6. [The legacy folder]()
+7. [Afterword](#7-afterword-top)
 
 > [!WARNING]
 > As a reminder by European standards of the AI Act - [article 5.1.f](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#art_5), putting either WAKEE, either WAKEE.reloaded into production is **strictly forbidden** and becomes **your** sole responsibility. Doing so **isn't intended** by any of us; sharing our project is only meant to help us with work applications, as well as a requirement for our French certificate RNCP38777 "AI Architect"!
@@ -164,7 +165,17 @@ Last but not least, all dependencies and versioning can be found within the root
 
 ---
 
-### 6. Afterword [:top:](#wakeereloaded-documentation)
+### 6. The legacy folder
+
+The legacy folder is an older, simpler version of the work making WAKEE what it is; this folder is aimed at people who would be interested in reviewing the underlying code to understand its logic, optimize it, reuse it, or fine-tune our model their own way.
+
+You may find it through this direct link to [the first version](https://github.com/JeremyM174/Hub-student_projects/tree/main/ML_Engineer_projects/6_lead-data-project_WAKEE/legacy) of WAKEE.
+
+**Be aware** however that WAKEE on its own (and consequently the legacy folder) was intended to run on Python **3.11**; WAKEE.reloaded runs on Python **3.10** instead to resolve some environment compatibilities!
+
+---
+
+### 7. Afterword [:top:](#wakeereloaded-documentation)
 
 Less of a technical read and more of a personal final word, as much as WAKEE.reloaded cannot and will not be taken farther, I dare think as the owner of this repository that I wouldn't impersonate my fellow co-learners in saying that all four of us are proud of what we produced.
 
